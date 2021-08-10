@@ -6,6 +6,8 @@
 ### Gitcoin: 3) Issue A Smart Contract Call To The Deployed Smart Contract :heavy_check_mark:	
 ### Gitcoin: 4) Issue An SUDT Token On Layer 1 And Deposit It To Layer 2 :heavy_check_mark:	
 ### Gitcoin: 5) Deploy The ERC20 Proxy Contract For The Deposited SUDT :heavy_check_mark:	
+### Gitcoin: 6) Use Force Bridge To Deposit Tokens From Ethereum To Polyjuice :heavy_check_mark:
+
 
 
 
