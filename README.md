@@ -10,6 +10,8 @@
 ### Gitcoin: 7) Port An Existing Ethereum DApp To Polyjuice :heavy_check_mark:
 ### Gitcoin: 8) Modify The Ported DApp So It Supports Ethereum Assets Via Force Bridge :heavy_check_mark:
 ### Gitcoin: 9) Initiate Withdrawal Process From The Layer 2 Back To Layer 1 :heavy_check_mark:
+### Gitcoin: 10) Complete Withdrawal Process By Unlocking The Funds :heavy_check_mark:
+
 
 
 
