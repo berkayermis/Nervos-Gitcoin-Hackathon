@@ -127,6 +127,58 @@ $ cd ~/projects/simple-DApp
 $ yarn add @polyjuice-provider/web3@0.0.1-rc7 nervos-godwoken-integration@0.0.6
 ~~~
 
+```@polyjuice-provider/web3``` is a custom Polyjuice web3 provider. It is required for interaction with Nervos' Layer 2 smart contracts.
+```nervos-godwoken-integration``` is a tool that can generate Polyjuice address based on your Ethereum address. You might be required to use Polyjuice address if you store values mapped to addresses in your contracts.
 
+## Configure the Web3 Provider (Step 5)
 
+This configuration process will replace the normal web3 provider that may be currently in use for Ethereum with one for the Godwoken Testnet.
+Firstly, you need to create a new ```config.ts``` file inside your src folder and set the below informations.
 
+As well as the Web3 provider, we need to add 2 more values to the config file which are ```ROLLUP_TYPE_HASH``` and ```ETH_ACCOUNT_LOCK_CODE_HASH``` respectively.
+
+Now, go to the ```~/projects/simple-DApp/src/config.ts``` directory and add these constants there.
+
+~~~
+export const CONFIG = {
+    WEB3_PROVIDER_URL: 'https://godwoken-testnet-web3-rpc.ckbapp.dev',
+    ROLLUP_TYPE_HASH: '0x4cc2e6526204ae6a2e8fcf12f7ad472f41a1606d5b9624beebd215d780809f6a',
+    ETH_ACCOUNT_LOCK_CODE_HASH: '0xdeec13a7b8e100579541384ccaf4b5223733e4a5483c3aec95ddc4c1d5ea5b22'
+};
+~~~
+
+After configuring these values, we need to import the config file inside our application file by following below instructions:
+
+~~~
+$ ~/projects/simple-DApp/src/ui/app.tsx.
+~~~
+
+~~~
+import { PolyjuiceHttpProvider } from '@polyjuice-provider/web3';
+import { CONFIG } from '../config';
+~~~
+
+Now, we need to add Polyjuice provider and use web3 instance in our application to communicate with Polyjuice!
+
+~~~
+const godwokenRpcUrl = CONFIG.WEB3_PROVIDER_URL;
+const providerConfig = {
+    rollupTypeHash: CONFIG.ROLLUP_TYPE_HASH,
+    ethAccountLockCodeHash: CONFIG.ETH_ACCOUNT_LOCK_CODE_HASH,
+    web3Url: godwokenRpcUrl
+};
+const provider = new PolyjuiceHttpProvider(godwokenRpcUrl, providerConfig);
+const web3 = new Web3(provider);
+~~~
+
+## Set High Gas Limit (Step 6)
+
+For the transactions, Godwoken needs a gas limit, this process is necessary for the current version of testnest but it might not be appear in the future. We will see the progress of it but we need to set gas limit for now.
+
+Open the ```~/projects/blockchain-workshop-ethereum-simple/src/lib/contracts/SimpleStorageWrapper.ts``` file in your editor and define the gas property as 6000000.
+
+~~~
+const DEFAULT_SEND_OPTIONS = {
+    gas: 6000000
+};
+~~~
