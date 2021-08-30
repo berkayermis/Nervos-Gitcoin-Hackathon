@@ -91,7 +91,7 @@ Create a ~/projects directory.
 ~~~
 $ mkdir ~/projects
 $ cd ~/projects
-$ git clone https://github.com/berkayermis/EmployeeDapp-Solidity.git simple-DApp
+$ git clone https://github.com/berkayermis/BallonDorCandidateDApp-Solidity.git simple-DApp
 $ cd simple-DApp
 ~~~
 
@@ -113,11 +113,11 @@ $ cd ~/projects/simple-DApp
 $ yarn ui
 ~~~
 
-After you see the **Compiled successfully.** you will be able to access the application thorugh http://localhost:3000 
+After you see the **Compiled successfully.** you will be able to access the application through http://localhost:3000 
 
 It will be something like that interface:
 
-![Screenshot from 2021-08-11 08-00-31](https://user-images.githubusercontent.com/67913214/130226497-5ba003ad-508c-43fa-a9f3-c35ea604159e.png)
+![Screenshot from 2021-08-31 00-11-07](https://user-images.githubusercontent.com/67913214/131406214-10134eee-7b69-4c44-9570-4c0176aae24b.png)
 
 ## Install Polyjuice Dependencies (Step 3)
 
@@ -178,7 +178,7 @@ const web3 = new Web3(provider);
 
 For the transactions, Godwoken needs a gas limit, this process is necessary for the current version of testnest but it might not be appear in the future. We will see the progress of it but we need to set gas limit for now.
 
-Open the ```~/projects/blockchain-workshop-ethereum-simple/src/lib/contracts/SimpleStorageWrapper.ts``` file in your editor and define the gas property as 6000000 at the top of the file.
+Open the ```~/projects/simple-DApp/src/lib/contracts/BallondorWrapper.ts``` file in your editor and define the gas property as 6000000 at the top of the file.
 
 ~~~
 const DEFAULT_SEND_OPTIONS = {
@@ -209,7 +209,7 @@ Now, you can visit the ```http://localhost:3000``` and view your final DApp whic
 
 If you fully completed all the instructions in this example, you will be able to see a similar interface as below.
 
-![Screenshot from 2021-08-11 08-00-47](https://user-images.githubusercontent.com/67913214/130239177-a42e073a-184a-4767-9a2f-688139403107.png)
+![Screenshot from 2021-08-30 23-59-21](https://user-images.githubusercontent.com/67913214/131404951-f34605c7-264e-4fcc-a36c-4098ebcd2fe8.png)
 
 ## Final Notes and Useful Links
 
