@@ -14,75 +14,160 @@ https://explorer.nervos.org/aggron/address/ckt1qyqw72rcmekhdea8jl56ahczkewmueyp9
 
 ## A screenshot of the console output immediately after you have successfully issued a smart contract calls on Layer 2.
 
-## Note 
-I have changed the smart contract which I have used for Task 7. It stores the employee of the month data instead the examples in task description. But the example folder which is gw-gitcoin-instruction is same, I just changed the smart contract.
+![Screenshot from 2021-09-02 19-24-16](https://user-images.githubusercontent.com/67913214/131881299-3ce9eb61-42a0-44b2-a092-e784511b1334.png)
 
-![Screenshot from 2021-08-19 15-24-49](https://user-images.githubusercontent.com/67913214/130067944-87a16160-6fd4-4718-a93b-86b930bdd327.png)
-
-![Screenshot from 2021-08-19 15-54-11](https://user-images.githubusercontent.com/67913214/130071932-56a1e6d8-15c0-4fb5-bfb4-532182ee375a.png)
+![Screenshot from 2021-09-02 19-33-07](https://user-images.githubusercontent.com/67913214/131882540-f9a25657-0d76-4e0e-9092-a1ff18edbb88.png)
 
 
 ## The transaction hash from the console output (in text format).
 
 ```
-0x8b131c3c8a07f88580b7eea63c4f649a553ba159c1840af0f30aa04df0a474ec
+0xaee5677cfc00fbde262caad2f0713c02fe8c62eaef0f88cf97874cf7e3dbd35c
 ```
 
 ## The contract address that you called (in text format).
 
 ```
-0xE4875921E893Fd3c6D0EEB1Eaf229aD1C37B5CF7
+0x76FD5635fcf346A43E393B0a122358A2f78FB755
 ```
 
 ## The ABI for contract you made a call on (in text format).
 
 ```
-"abi": [
-    {
-      "inputs": [],
-      "stateMutability": "payable",
-      "type": "constructor"
-    },
-    {
-      "inputs": [],
-      "name": "storedData",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "x",
-          "type": "string"
-        }
-      ],
-      "name": "set",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "get",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    }
-  ],
+[
+  {
+    "inputs": [],
+    "name": "nextId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "players",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "teamName",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "teamName",
+        "type": "string"
+      }
+    ],
+    "name": "add",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "idd",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "teamName",
+        "type": "string"
+      }
+    ],
+    "name": "update",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "remove",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "read",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "teamName",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Ballondor.player",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
 ```
 
 ## Your Tron address (in text format).
