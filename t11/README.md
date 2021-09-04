@@ -21,8 +21,9 @@ https://explorer.nervos.org/aggron/address/ckt1qyqw72rcmekhdea8jl56ahczkewmueyp9
 
 ## The transaction hash from the console output (in text format).
 
+Write Call Transaction Hash:
 ```
-0xaee5677cfc00fbde262caad2f0713c02fe8c62eaef0f88cf97874cf7e3dbd35c
+0xf2a00cf4d387a3d3e2e5886fa9929d2eb45ed529e107e8d6ba8400b42cc453cc
 ```
 
 ## The contract address that you called (in text format).
